@@ -1,0 +1,26 @@
+version: 1
+disable_existing_loggers: true
+
+formatters:
+  simple:
+    format: '%(levelname)s : %(asctime)s (%(threadName)-2s) - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+#    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+loggers:
+  main:
+    level: DEBUG
+    handlers: [ console ]
+  app:
+    level: DEBUG
+    handlers: [console]
+  zeep:
+    level: ERROR
+    handlers: [console]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]

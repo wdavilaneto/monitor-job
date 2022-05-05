@@ -1,0 +1,5 @@
+pyyaml
+py-trello
+psycopg2-binary
+python-dotenv
+sqlalchemy
